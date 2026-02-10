@@ -88,17 +88,18 @@
 ![MobileNetV2 Testing Result](assets/test_set_result.PNG)
 
 ## 📊 Weights & Biases Reports
-### Validation Loss
-![WandB Val Loss](images/wandb_val_loss.png)
-
 ### Validation Accuracy
-![WandB Val Accuracy](images/wandb_val_accuracy.png)
+![WandB Val Accuracy](assets/val_accuracy.png)
+
+### Validation Loss
+![WandB Val Loss](assets/val_loss.png)
+
 
 ### Training Accuracy
-![WandB Epoch Accuracy](images/wandb_epoch_accuracy.png)
+![WandB Epoch Accuracy](iassets/training_accuracy.png)
 
 ### Training Loss
-![WandB Epoch Loss](images/wandb_epoch_loss.png)
+![WandB Epoch Loss](assets/training_loss.png)
 
 ## 🌐 Deployment
 - Deployed using Streamlit Cloud
@@ -122,5 +123,6 @@ git clone https://github.com/yourusername/yourrepo.git
 cd yourrepo
 pip install -r requirements.txt
 streamlit run app.py
+
 
 
