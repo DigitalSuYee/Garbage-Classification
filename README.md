@@ -96,7 +96,7 @@
 
 
 ### Training Accuracy
-![WandB Epoch Accuracy](iassets/training_accuracy.png)
+![WandB Epoch Accuracy](assets/training_accuracy.png)
 
 ### Training Loss
 ![WandB Epoch Loss](assets/training_loss.png)
@@ -123,6 +123,7 @@ git clone https://github.com/yourusername/yourrepo.git
 cd yourrepo
 pip install -r requirements.txt
 streamlit run app.py
+
 
 
 
