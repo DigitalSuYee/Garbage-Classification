@@ -70,22 +70,22 @@
 
 ### 🧠 Baseline CNN
 #### Train vs Validation Loss
-![CNN Train Val Loss](images/cnn_train_val_loss.png)
+![CNN Train Val Loss](assets/cnn_train_val_loss_curve.png)
 
 ---
 
 ### ⚡ ResNet18
 #### Train vs Validation Loss
-![ResNet18 Train Val Loss](images/resnet18_train_val_loss.png)
+![ResNet18 Train Val Loss](assets/resnet_train_val_loss_curve.png)
 
 ---
 
 ### 🚀 MobileNetV2
 #### Train vs Validation Loss
-![MobileNetV2 Train Val Loss](images/mobilenetv2_train_val_loss.png)
+![MobileNetV2 Train Val Loss](assets/mobilenet_train_val_loss_curve.png)
 
 #### Testing Results for each model
-![MobileNetV2 Testing Result](images/mobilenetv2_test_result.png)
+![MobileNetV2 Testing Result](assets/test_set_result.PNG)
 
 ## 📊 Weights & Biases Reports
 ### Validation Loss
@@ -122,4 +122,5 @@ git clone https://github.com/yourusername/yourrepo.git
 cd yourrepo
 pip install -r requirements.txt
 streamlit run app.py
+
 
