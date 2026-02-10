@@ -1,7 +1,6 @@
 import streamlit as st
 from PIL import Image
 import cv2
-from streamlit_webrtc import webrtc_streamer, VideoProcessorBase
 
 # 👇 import NEW functions
 from predict import load_model_from_hf, predict_image
