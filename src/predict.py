@@ -3,6 +3,9 @@ import numpy as np
 from PIL import Image
 from huggingface_hub import hf_hub_download
 
+# ✅ Explicit import (important — avoid keras 3 conflict)
+from tensorflow.keras.models import load_model
+
 
 REPO_ID = "SuYee189/garbage_classification"
 MODEL_FILE = "ResNet18_Scratch_best.h5"
@@ -18,6 +21,7 @@ CLASS_NAMES = [
 
 IMG_SIZE = (224, 224)
 
+
 def load_model_from_hf():
 
     model_path = hf_hub_download(
@@ -26,7 +30,8 @@ def load_model_from_hf():
         local_dir="models"
     )
 
-    model = tf.keras.models.load_model(model_path)
+    # ✅ compile=False avoids keras version conflict
+    model = load_model(model_path, compile=False)
 
     return model
 
