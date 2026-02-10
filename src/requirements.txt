@@ -46,7 +46,6 @@ numpy==2.4.2
 opencv-python==4.13.0.92
 opt_einsum==3.4.0
 optree==0.18.0
-packaging @ file:///C:/miniconda3/conda-bld/packaging_1761049096285/work
 pandas==2.3.3
 pillow==12.1.0
 protobuf==6.33.5
