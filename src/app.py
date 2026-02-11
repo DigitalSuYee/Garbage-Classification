@@ -17,6 +17,27 @@ def load_model():
 model = load_model()
 
 # ==========================
+# INSTRUCTIONS SECTION
+# ==========================
+with st.expander("📘 Garbage Classification Instructions"):
+    st.write("""
+This AI model classifies garbage into 6 categories:
+
+- Plastic
+- Metal
+- Glass
+- CardBoard
+- Paper
+- Trash
+
+Tips for best accuracy:
+- Use clear images
+- Avoid blurry photos
+- Ensure good lighting
+- Center the garbage object
+""")
+
+# ==========================
 # PAGE SETUP
 # ==========================
 
@@ -24,10 +45,9 @@ st.set_page_config(page_title="Garbage Classification AI", layout="centered")
 
 st.title("♻️ Garbage Classification AI")
 
-tab1, tab2, tab3 = st.tabs([
+tab1, tab2 = st.tabs([
     "📂 Upload Image",
     "📷 Camera Capture",
-    "🎥 Real-Time Video"
 ])
 
 # -------------------------
