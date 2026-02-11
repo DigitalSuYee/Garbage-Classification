@@ -107,6 +107,7 @@
   - Upload Image Classification
   - Capture Image from Local Camera
   - Live Real-Time Video Classification
+  - Test in this link : https://garbage-classification-test.streamlit.app/
   
  ---
   ## 🛠️ Tech Stack
@@ -123,6 +124,7 @@ git clone https://github.com/yourusername/yourrepo.git
 cd yourrepo
 pip install -r requirements.txt
 streamlit run app.py
+
 
 
 
