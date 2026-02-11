@@ -1,4 +1,12 @@
 import streamlit as st
+
+# ✅ MUST be the very first Streamlit command
+st.set_page_config(
+    page_title="Garbage Classification AI",
+    layout="centered",
+    page_icon="♻️"
+)
+
 from PIL import Image
 import cv2
 
@@ -38,10 +46,8 @@ Tips for best accuracy:
 """)
 
 # ==========================
-# PAGE SETUP
+# MAIN UI
 # ==========================
-
-st.set_page_config(page_title="Garbage Classification AI", layout="centered")
 
 st.title("♻️ Garbage Classification AI")
 
@@ -54,16 +60,13 @@ tab1, tab2 = st.tabs([
 # TAB 1 — Upload Image
 # -------------------------
 with tab1:
-
     uploaded_file = st.file_uploader(
         "Upload Image",
         type=["jpg", "jpeg", "png"]
     )
 
     if uploaded_file is not None:
-
         image = Image.open(uploaded_file).convert("RGB")
-
         st.image(image, caption="Uploaded Image")
 
         label, confidence = predict_image(image, model)
@@ -75,13 +78,10 @@ with tab1:
 # TAB 2 — Camera Capture
 # -------------------------
 with tab2:
-
     camera_image = st.camera_input("Take a photo")
 
     if camera_image is not None:
-
         image = Image.open(camera_image).convert("RGB")
-
         st.image(image, caption="Captured Image")
 
         label, confidence = predict_image(image, model)
@@ -92,7 +92,6 @@ with tab2:
 # ==========================
 # FOOTER
 # ==========================
-
 
 st.markdown("---")
 st.markdown(
