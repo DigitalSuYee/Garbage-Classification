@@ -1,5 +1,4 @@
 import streamlit as st
-from streamlit_webrtc import webrtc_streamer, VideoProcessorBase
 
 # ✅ MUST be the first Streamlit command
 st.set_page_config(
@@ -60,10 +59,9 @@ st.markdown("---")
 # TABS
 # ==========================
 
-tab1, tab2, tab3 = st.tabs([
+tab1, tab2 = st.tabs([
     "📂 Upload Image",
     "📷 Camera Capture",
-    "🎥 Real-Time Video"
 ])
 
 # -------------------------
@@ -129,27 +127,6 @@ with tab3:
             )
 
             return frame.from_ndarray(img, format="bgr24")
-    # ==========================
-    # WEBRTC CONFIG (FIX CONNECTION ISSUE)
-    # ==========================
-    
-    RTC_CONFIGURATION = {
-        "iceServers": [
-            {"urls": ["stun:stun.l.google.com:19302"]},
-            {"urls": ["stun:stun1.l.google.com:19302"]},
-            {"urls": ["stun:stun2.l.google.com:19302"]}
-        ]
-    }
-
-    webrtc_streamer(
-        key="real-time",
-        video_processor_factory=VideoProcessor,
-        rtc_configuration=RTC_CONFIGURATION,
-        media_stream_constraints={
-            "video": True,
-            "audio": False
-        }
-    )
 
 # ==========================
 # FOOTER
