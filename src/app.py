@@ -97,37 +97,6 @@ with tab2:
         st.success(f"🧠 Prediction: **{label}**")
         st.info(f"📊 Confidence: **{confidence:.4f}**")
 
-# -------------------------
-# TAB 3 — REAL-TIME VIDEO
-# -------------------------
-with tab3:
-
-    st.write("Live webcam classification")
-
-    class VideoProcessor(VideoProcessorBase):
-
-        def recv(self, frame):
-
-            img = frame.to_ndarray(format="bgr24")
-
-            pil_img = Image.fromarray(
-                cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-            )
-
-            label, confidence = predict_image(pil_img, model)
-
-            cv2.putText(
-                img,
-                f"{label} ({confidence:.2f})",
-                (10,30),
-                cv2.FONT_HERSHEY_SIMPLEX,
-                1,
-                (0,255,0),
-                2
-            )
-
-            return frame.from_ndarray(img, format="bgr24")
-
 # ==========================
 # FOOTER
 # ==========================
