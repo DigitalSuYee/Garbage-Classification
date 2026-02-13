@@ -129,10 +129,26 @@ with tab3:
             )
 
             return frame.from_ndarray(img, format="bgr24")
+    # ==========================
+    # WEBRTC CONFIG (FIX CONNECTION ISSUE)
+    # ==========================
+    
+    RTC_CONFIGURATION = {
+        "iceServers": [
+            {"urls": ["stun:stun.l.google.com:19302"]},
+            {"urls": ["stun:stun1.l.google.com:19302"]},
+            {"urls": ["stun:stun2.l.google.com:19302"]}
+        ]
+    }
 
     webrtc_streamer(
         key="real-time",
-        video_processor_factory=VideoProcessor
+        video_processor_factory=VideoProcessor,
+        rtc_configuration=RTC_CONFIGURATION,
+        media_stream_constraints={
+            "video": True,
+            "audio": False
+        }
     )
 
 # ==========================
