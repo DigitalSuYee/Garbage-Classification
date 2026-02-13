@@ -60,9 +60,10 @@ st.markdown("---")
 # TABS
 # ==========================
 
-tab1, tab2 = st.tabs([
+tab1, tab2, tab3 = st.tabs([
     "📂 Upload Image",
     "📷 Camera Capture",
+    "🎥 Real-Time Video"
 ])
 
 # -------------------------
